@@ -51,12 +51,12 @@ angular.module('starter', ['ionic',
     }
   })
 
-  .state('tab.chats', {
-      url: '/chats',
+  .state('tab.reservations', {
+      url: '/reservations',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
+        'tab-reservations': {
+          templateUrl: 'templates/tab-reservations.html',
+          controller: 'ReservationsCtrl'
         }
       }
     })

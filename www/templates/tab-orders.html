@@ -1,11 +1,11 @@
 <ion-view view-title="Orders" ng-controller="OrdersCtrl">
   <ion-content class="padding">
     <ion-list>
-                   <span ng-repeat="course in menu">
-                             <ion-item class="item-divider">{{course.meal}}</ion-item>
-                             <ion-item click-for-options ng-repeat="item in course.items">
-                               {{item.item}} <span class="item-note">{{item.price | currency:"€"}}
-                               <ion-option-button class="button-energized" ng-click="add(item)">Order</ion-option-button>
+                   <span ng-repeat="orders in orders">
+                             <ion-item class="item-divider">Orders</ion-item>
+                             <ion-item click-for-options ng-repeat="item in orders.content.items">
+                                {{item.item}}<span class="item-note">{{item.price | currency:"€"}}
+                               <ion-option-button class="button-assertive" ng-click="add(item)">Remove</ion-option-button>
                              </ion-item>
                    </span>
              </ion-list>

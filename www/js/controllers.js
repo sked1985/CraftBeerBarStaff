@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('OrdersCtrl', function($scope, $ionicLoading, MenuService) {
+.controller('OrdersCtrl', function($scope, $ionicLoading, OrdersService) {
 
 
         //Loading icon until orders are shown
@@ -9,15 +9,15 @@ angular.module('starter.controllers', [])
         })
 
         //This displays the menu on the order page
-            $scope.menu = MenuService.$asArray();
-            $scope.menu.$loaded().then(function () {
+            $scope.orders = OrdersService.$asArray();
+            $scope.orders.$loaded().then(function () {
               $ionicLoading.hide();
             });
 
 
 })
 
-.controller('ChatsCtrl', function($scope, Chats) {
+.controller('ReservationsCtrl', function($scope, Chats) {
   $scope.chats = Chats.all();
   $scope.remove = function(chat) {
     Chats.remove(chat);

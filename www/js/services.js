@@ -1,7 +1,7 @@
 angular.module('starter.services', [])
 
-.factory('MenuService', function ($firebase) {
-         var firebase = new Firebase('https://craftbeerproject.firebaseio.com/menu');
+.factory('OrdersService', function ($firebase) {
+         var firebase = new Firebase('https://craftbeerproject.firebaseio.com/orders');
          var service = $firebase(firebase);
             return service;
 })
@@ -54,7 +54,7 @@ angular.module('starter.services', [])
     id: 3,
     name: 'Perry Governor',
     lastText: 'Look at my mukluks!',
-    face: 'https://pbs.twimg.com/profile_images/491995398135767040/ie2Z_V6e.jpeg'
+    face: 'https://pbs.twimg.com/profile_images/578237281384841216/R3ae1n61.png'
   }, {
     id: 4,
     name: 'Mike Harrington',
