@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('OrdersCtrl', function($scope, $ionicLoading, OrdersService) {
+.controller('OrdersCtrl', function($scope, $ionicLoading, $ionicListDelegate, OrdersService) {
 
 
         //Loading icon until orders are shown
@@ -14,6 +14,9 @@ angular.module('starter.controllers', [])
               $ionicLoading.hide();
             });
 
+            $scope.remove = function (index) {
+             $scope.order.item.splice(index, 1);
+           };
 
 })
 

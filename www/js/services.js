@@ -4,6 +4,7 @@ angular.module('starter.services', [])
          var firebase = new Firebase('https://craftbeerproject.firebaseio.com/orders');
          var service = $firebase(firebase);
             return service;
+            
 })
 
 
